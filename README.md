@@ -1,9 +1,10 @@
 <div align="center">
 
-# 💸 ExpenseFlow
+# 💸 Reimbursement Management System
 
-**Advanced Reimbursement Management System & Workflow Engine**
+**Advanced Dynamic Workflow Engine & Employee Expense Manager**
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-black.svg?logo=github)](https://github.com/omkarsp03/Reimbursement-management)
 [![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-v20-green.svg)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5-lightgray.svg)](https://expressjs.com/)
@@ -11,7 +12,7 @@
 
 </div>
 
-**ExpenseFlow** is a sophisticated **Reimbursement Management System** featuring a dynamic, rule-based workflow engine. Built with modern web technologies, it provides a seamless experience for employees to submit expenses and for management to approve them through multi-level organizational hierarchies.
+The **Reimbursement Management System** is a sophisticated, full-stack application featuring a dynamic, rule-based workflow engine. Built with modern web technologies, it provides a seamless experience for employees to submit expenses and for management to approve them through multi-level organizational hierarchies.
 
 ---
 
@@ -27,83 +28,68 @@
 
 ## 🏗️ Technical Stack
 
-### **Frontend**
-- **React 19** & **Vite**
-- **Framer Motion** (Animations)
+### **Frontend (Vite + React)**
+- **React 19**
+- **Framer Motion** (Micro-Animations & Layout Transitions)
 - **Recharts** (Data Visualization)
-- Modern CSS with CSS Variables
+- Pre-configured `vercel.json` for 1-click Vercel deployments.
 
-### **Backend**
+### **Backend (Node.js + Express)**
 - **Node.js** & **Express 5**
-- **SQLite** (Persistent Database)
+- **SQLite** (Persistent Database via `sqlite3`)
 - **pg-mem** (In-Memory Database Option)
-- **JWT** Authentication
+- **JWT** Authentication (`jsonwebtoken`)
 
 ---
 
-## 🚀 Quick Start & Verification
+## ☁️ Cloud Deployment Ready
 
-We provide a zero-configuration setup to verify that the project is completely functional and healthy immediately after cloning.
-
-### 1. Automatic System Check
-We've included a diagnostic script that verifies your environment and project integrity. From the project root, run:
-```bash
-npm run check
-```
-*(This script checks for Node.js installation, missing dependencies, and backend server health.)*
+This system is completely configured to be deployed seamlessly on **Free Cloud Servers**.
+1. **Frontend**: Simply link your GitHub repository to [Vercel](https://vercel.com). The included `vercel.json` file ensures routing functions flawlessly out of the box. Add the environment variable `VITE_API_URL` pointing to your deployed backend URL.
+2. **Backend**: Host the Express server on [Render.com](https://render.com) using the `backend/` root directory. The application's `api.js` automatically syncs itself with the backend endpoint once deployed!
 
 ---
 
-## 🛠️ Detailed Setup
+## 🚀 Quick Start & Local Setup
 
-### 1. Install Dependencies
-You can now quickly install both frontend and backend dependencies using concurrently configured commands:
+We provide a zero-configuration setup to test and run the project completely locally!
+
+### 1. Automatic Install
+You can quickly install both frontend and backend dependencies concurrently from the root:
 ```bash
 npm run install-all
 ```
 
-### 2. Boot Up the Backend
-The backend utilizes SQLite/pg-mem out of the box, so **no external database or Docker setup is required**:
+### 2. Boot Up the Backend Server
+The backend utilizes SQLite natively, so **no external database or Docker setup is required**:
 ```bash
 npm run backend
 ```
 > **Note**: Wait for the *"🚀 Server status: RUNNING"* verification message.
 
-### 3. Launch the Frontend
+### 3. Launch the Frontend UI
 In a fresh terminal (at the project root), start the development server:
 ```bash
 npm run frontend
 ```
-> Start exploring the platform at the generated Local URL (typically `http://localhost:5173`).
+> Explore the platform at the generated Local URL (typically `http://localhost:5173`).
 
 ---
 
-## 🧪 Functional Verification & Tour
+## 🧪 Detailed Functional Testing
 
-Once both backend and frontend servers are successfully running, here is how you can ensure the system is functionally optimal:
+Once both the backend and frontend servers are successfully running on your machine:
 
-### 1. Authentication Check
-- **Login Credentials**: `admin@techcorp.com` | Password: `Demo@123`
-- Expectation: Upon successful login, you should instantly see the **Dashboard**, complete with rich summary statistics.
-
-### 2. Backend API Health
-- **Endpoint**: [http://localhost:5001/api/health](http://localhost:5001/api/health)
-- Expectation: Should respond successfully with a JSON payload: `{"status": "ok", ...}`
-
-### 3. Expense Management Simulation
-- Navigate to the **Expenses** portal.
-- Initiate a "New Expense" to submit a test claim.
-- Expectation: The newly minted expense should successfully populate your list reflecting a "Pending" status.
-
-### 4. Workflow Rules Engine
-- Navigate to the **Workflows** directory.
-- Expectation: Verify that the default standard frameworks (e.g., "Standard Approval") load perfectly.
+1. **Authentication Check**: Log in on the UI using `admin@techcorp.com` | Password: `Demo@123`.
+2. **Backend API Health**: Visit [http://localhost:5001/api/health](http://localhost:5001/api/health) to ensure it returns `{"status": "ok", ...}`.
+3. **Expense Management**: Navigate to the **Expenses** portal and submit a "New Expense". Ensure it hits the "Pending" status in your data list.
+4. **Workflow Rules Engine**: Dive into the **Workflows** directory and observe the multi-tier rules dictating employee reimbursement logic dynamically.
 
 ---
 
 ## 🔑 Application Demo Roles
 
-All users in the demo setup share a common password constraint: **`Demo@123`**
+If you are running the system logically, you can use these preset roles. All users uniquely share a common password protocol: **`Demo@123`**
 
 | Role | Email Login |
 | :--- | :--- |
@@ -117,5 +103,5 @@ All users in the demo setup share a common password constraint: **`Demo@123`**
 ---
 
 <div align="center">
-<i></i>
+<i>Built with ❤️ for rapid and rule-driven robust systems.</i>
 </div>
