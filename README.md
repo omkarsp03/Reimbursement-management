@@ -103,5 +103,5 @@ If you are running the system logically, you can use these preset roles. All use
 ---
 
 <div align="center">
-<i>Built with ❤️ for rapid and rule-driven robust systems.</i>
+
 </div>
