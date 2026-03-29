@@ -117,5 +117,5 @@ All users in the demo setup share a common password constraint: **`Demo@123`**
 ---
 
 <div align="center">
-<i>Built with ❤️ for rapid and rule-driven robust systems.</i>
+<i></i>
 </div>
