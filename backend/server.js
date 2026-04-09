@@ -23,22 +23,22 @@ app.use((req, res, next) => {
   const start = Date.now();
   res.on('finish', () => {
     const duration = Date.now() - start;
-    if (req.url !== '/api/health') {
+    if (req.url !== '/api/health' && req.url !== '/health') {
       console.log(`${req.method} ${req.url} ${res.statusCode} ${duration}ms`);
     }
   });
   next();
 });
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/expenses', expenseRoutes);
-app.use('/api/workflows', workflowRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/dashboard', dashboardRoutes);
+// Routes - Array supports both standard /api and stripped path (Vercel experimentalServices)
+app.use(['/api/auth', '/auth'], authRoutes);
+app.use(['/api/expenses', '/expenses'], expenseRoutes);
+app.use(['/api/workflows', '/workflows'], workflowRoutes);
+app.use(['/api/users', '/users'], userRoutes);
+app.use(['/api/dashboard', '/dashboard'], dashboardRoutes);
 
 // Health check
-app.get('/api/health', (req, res) => {
+app.get(['/api/health', '/health'], (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
